@@ -9,6 +9,7 @@ services:
       POSTGRES_DB: tc
       POSTGRES_USER: tc
       POSTGRES_PASSWORD: tc
+    restart: always
   app:
     build: .
     ports:
@@ -19,4 +20,5 @@ services:
       SPRING_DATASOURCE_PASSWORD: tc
     depends_on:
       - db
+    restart: always
 
